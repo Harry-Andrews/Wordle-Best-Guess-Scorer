@@ -29,7 +29,7 @@ best_word_score = 2000
 #     print(f"Now working on {valid_guess}")
 #     max_size_of_worst_case = 0
 
-guess_combinations = [["SALET", "DUCKY", "PRION"]]
+guess_combinations = [["SALET", "DUCKY"] ["SALET", "PRION"]]
 
 now = time.perf_counter()
 
@@ -37,7 +37,7 @@ for guess_combo in guess_combinations:
     print(f"Now working on {guess_combo}")
     for answer in answer_list:  # Starts one of the 2311 games of wordle we could play
         #print(f"Answer is {answer}")
-        possible_answers_list = answer_list[:]  # This stops us linking the lists!!
+        possible_answers_list = answer_list[:]  # the [:] stops us linking the lists!!
         for word in guess_combo:
             game_output = check_guess(word, answer)
             for poss_answer in possible_answers_list:
