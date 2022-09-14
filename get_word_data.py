@@ -40,8 +40,6 @@ with open("every_english_word.txt", "r") as f:
         word_to_be_added = f.readline().strip()
         if len(word_to_be_added) == 5:
             valid_guesses.append(word_to_be_added)
-print(valid_guesses)
-print(len(valid_guesses))
 
 with open("valid_guesses.pkl", "wb") as f:
     pickle.dump(valid_guesses, f)
